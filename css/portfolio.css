@@ -1,3 +1,93 @@
-.wrapper {
+header {
+  height: 155px;
+  background-color: white;
+  border-bottom: 5px solid #7d97ad;
+  font: Arial;
+  text-align: right;
+}
+
+body {
+  /* width: 100vw; */
+  height: 100vh;
+  margin-right: 5em;
+  margin-left: 5em;
+}
+
+section {
+  width: 100%;
+  margin-top: 1.5em;
+  background-color: lightblue;
+}
+
+footer {
+  height: 100px;
+  background-color: lightgray;
+}
+
+#banner-area {
+  height: 400px;
+}
+
+#featured-work {
+  height: 400px;
+}
+
+#logo {
+  height: 100px;
+  width: 100px;
+  background-color: lightgray;
+  float: left;
+}
+
+#banner {
+  height: 400px;
+  background-color: lightgray;
+}
+
+#featured-grid {
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2em;
+}
+
+.featured {
+  margin: 1px solid black;
+  height: 280px;
+}
+
+.featured-first-column {
+  grid-column: 1;
+  background-color: red;
+}
+
+.featured-second-column {
+  grid-column: 2;
+  background-color: green;
+}
+
+.featured-third-column {
+  grid-column: 3;
+  background-color: blue;
+}
+
+.card {
+  display: grid;
+  grid-template-rows: 4fr 1fr 0.5fr;
+  height: 280px;
+  text-align: center;
+}
+
+.card-row-1 {
+  grid-row: 1;
+  background-color: rgba(0,0,0, 0.2);
+}
+
+.card-row-2 {
+  grid-row: 2;
+  background-color: rgba(0,0,0, 0.4);
+}
+
+.card-row-3 {
+  grid-row: 3;
+  background-color: rgba(0,0,0, 0.6);
 }
