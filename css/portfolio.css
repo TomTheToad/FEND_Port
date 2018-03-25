@@ -1,93 +1,95 @@
+/* core */
+body {
+  height: 100vh;
+  margin: 0 auto;
+  /* margin-right: 5em;
+  margin-left: 5em; */
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+}
+
+img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+/* grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 1em;
+}
+
+/* sections */
 header {
   height: 155px;
   background-color: white;
   border-bottom: 5px solid #7d97ad;
-  font: Arial;
+  text-align: right;
+  grid-auto-rows: minmax(auto, 155);
+  width: 100%;
+}
+
+header img {
+  position: absolute;
+  float: left;
+  width: 100px;
+  height: 100px;
+  background-color: lightgray;
+  margin-top: 2em;
+}
+
+header h1, h3 {
+  margin: auto 0;
   text-align: right;
 }
 
-body {
-  /* width: 100vw; */
-  height: 100vh;
-  margin-right: 5em;
-  margin-left: 5em;
-}
-
-section {
-  width: 100%;
-  margin-top: 1.5em;
-  background-color: lightblue;
-}
-
-footer {
-  height: 100px;
-  background-color: lightgray;
-}
-
-#banner-area {
+main {
+  margin-top: 2em;
+  background-color: #333;
   height: 400px;
 }
 
-#featured-work {
-  height: 400px;
+#header-title {
+  grid-column: span 3;
+  grid-row: span 3;
+  align-items: flex-end;
+  text-align: bottom;
+  /* background-color: lightblue; */
+  margin-top: 2em;
 }
 
-#logo {
-  height: 100px;
-  width: 100px;
+#featured {
+  margin-top: 2em;
   background-color: lightgray;
-  float: left;
+  /* height: 280px; */
 }
 
-#banner {
-  height: 400px;
-  background-color: lightgray;
-}
-
-#featured-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 2em;
-}
-
-.featured {
-  margin: 1px solid black;
-  height: 280px;
-}
-
-.featured-first-column {
-  grid-column: 1;
-  background-color: red;
-}
-
-.featured-second-column {
-  grid-column: 2;
-  background-color: green;
-}
-
-.featured-third-column {
-  grid-column: 3;
-  background-color: blue;
-}
-
+/* card styles */
 .card {
-  display: grid;
-  grid-template-rows: 4fr 1fr 0.5fr;
-  height: 280px;
+  display: block;
+  height: inherit;
+  width: 100vw;
   text-align: center;
 }
 
-.card-row-1 {
+/* card styles responsive */
+#card-left {
+  grid-column: 0/4;
   grid-row: 1;
-  background-color: rgba(0,0,0, 0.2);
+  background-color: red;
 }
 
-.card-row-2 {
+#card-middle {
+  grid-column: 0/4;
   grid-row: 2;
-  background-color: rgba(0,0,0, 0.4);
+  background-color: green;
 }
 
-.card-row-3 {
+#card-right {
+  grid-column: 0/4;
   grid-row: 3;
-  background-color: rgba(0,0,0, 0.6);
+  background-color: blue;
 }
