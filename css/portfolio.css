@@ -1,9 +1,11 @@
 /* core */
 body {
   height: 100vh;
+  /* overflow-y: auto; */
   margin: 0 auto;
   font-family: Arial, sans-serif;
   font-size: 1em;
+  background-color: rgb(220, 220, 220);
 }
 
 img {
@@ -12,13 +14,28 @@ img {
   width: 100%;
 }
 
+article {
+  /* overflow-y: scroll;
+  margin-bottom: 2px; */
+}
+
+section {
+  height: inherit;
+  overflow-y: scroll;
+  width: 100vw;
+}
+
 /* grid areas definitions */
 .main-head {
   grid-area: header;
 }
 
-.content {
+.content-main {
   grid-area: main;
+}
+
+.content-featured {
+  grid-area: featured;
 }
 
 .main-footer {
@@ -28,11 +45,13 @@ img {
 /* grid */
 .grid {
   display: grid;
-  height: 100%;
-  grid-template-rows: 1fr 4fr 0.5fr;
+  height: 100vh;
+  /* overflow-y: auto; */
+  grid-template-rows: 1fr 2fr 2fr 0.5fr;
   grid-template-areas:
     "header"
     "main"
+    "featured"
     "footer"
 }
 
@@ -69,7 +88,7 @@ header h1, h3 {
 /* main */
 main {
   display: table;
-  height: 500px;
+  height: 100%;
   /* background-color: blue; */
 }
 
@@ -83,6 +102,7 @@ main {
 }
 
 #content-bg-img {
+  display: table; /* TODO: fix this, id name is confusing */
   z-index: -1;
   /* width: 100%; */
   height: inherit;
@@ -102,4 +122,72 @@ main {
   vertical-align: middle;
   color: white;
   background-color: rgba(0,0,0,0.4);
+}
+
+/* featured cards */
+/* card rows */
+.card-row-1 {
+  grid-area: card1;
+  grid-column: 1/4;
+  grid-row: 1;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+}
+.card-row-2 {
+  grid-area: card2;
+  grid-column: 1/4;
+  grid-row: 2;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+}
+.card-row-3 {
+  grid-area: card3;
+  grid-column: 1/4;
+  grid-row: 3;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+}
+.card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 3fr 1fr 0.5fr;
+  grid-template-areas: "card1 card2 card3"
+  height: inherit;
+  min-height: 280px;
+  font-family: Verdana, sans-serif;
+  font-size: 2em;
+  text-align: center;
+  color: white;
+}
+
+#card1 {
+  height: inherit;
+  grid-area: card1;
+  background-color: red;
+}
+
+#card2 {
+  height: inherit;
+  grid-area: card2;
+  background-color: green;
+}
+
+#card3 {
+  height: inherit;
+  grid-area: card3;
+  background-color: blue;
+}
+
+#content-featured {
+  height: 100%;
+  /* margin-left: 1em;
+  margin-right: 1em; */
+  /* display: flex; */
+  /* overflow: auto; */
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "card1 card2 card3";
+}
+
+/* footer */
+footer {
+  /* position: absolute;
+  bottom: 0; */
+  background-color: white;
 }
