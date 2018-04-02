@@ -1,15 +1,11 @@
 /* core */
 body {
-  /* height: 100vh; */
-  /* height: 100%; */
-  /* min-height: 100vh; */
-  width: 100vw;
   text-align: center;
-  margin: 0 auto;
   padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
   font-family: Arial, sans-serif;
   font-size: 1em;
-  /* background-color: rgb(220, 220, 220); */
   background-color: white;
 }
 
@@ -33,7 +29,7 @@ header {
 }
 
 header img {
-  position: absolute;
+  /* position: absolute; */
   float: left;
   width: 100px;
   height: 100px;
@@ -59,6 +55,7 @@ header h1, h3 {
 /* main */
 main {
   margin-top: 2em;
+  text-align: center;
 }
 
 img {
@@ -76,7 +73,7 @@ footer {
 #content-bg-img {
   display: table; /* TODO: fix this, id name is confusing */
   z-index: -1;
-  min-height: 500px;
+  /* min-height: 500px; */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -116,7 +113,9 @@ footer {
 /* featured content grid area */
 #content-featured {
   display: grid;
+  justify-content: center;
   grid-template-rows: auto;
+  grid-template-columns: auto;
   grid-template-areas:
     "title"
     "card1"
@@ -163,7 +162,7 @@ footer {
 }
 
 /* styles for displays > 450px wide */
-@media screen and (min-device-width: 450px) {
+@media screen and (min-width: 768px) {
   .card {
     padding: 1em;
     box-shadow:  2px 2px 10px 0px rgba(0, 0, 0, 0.2);
@@ -171,19 +170,31 @@ footer {
 
   #content-featured {
     grid-template-areas:
-    "title . ."
-    "card1 card2 card3";
+    "title title"
+    "card1 card2"
+    "card3 .";
   }
 }
 
 /* styles for displays > 450px wide */
-@media screen and (min-device-width: 950px) {
-.card {
-  margin: 2em;
-}
+@media screen and (min-width: 1000px) {
+  .card {
+    padding: 1em;
+    margin: 2em;
+    box-shadow:  2px 2px 10px 0px rgba(0, 0, 0, 0.2);
+  }
 
   body {
-    padding-left: 2em;
-    padding-right: 2em;
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+
+  #content-featured {
+    display: grid;
+    grid-template-rows: 3;
+    grid-template-columns: 3;
+    grid-template-areas:
+    "title title title"
+    "card1 card2 card3";
   }
 }
