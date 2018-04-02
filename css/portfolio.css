@@ -16,6 +16,26 @@ h2 {
   font-weight: 500;
 }
 
+a {
+  color: #008DFF;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #008DFF;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+a:visited {
+  color: #00D5FF;
+}
+
+img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
 /* header */
 header {
   display: table;
@@ -57,35 +77,9 @@ main {
   text-align: center;
 }
 
-a {
-  color: #008DFF;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #008DFF;
-  text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
-}
-
-a:visited {
-  color: #00D5FF;
-}
-
-img {
-  display: block;
-  height: auto;
-  width: 100%;
-}
-
 caption {
   font-size: 10px;
   color: white;
-}
-
-/* footer */
-footer {
-  height: 60px;
-  background-color: white;
 }
 
 #content-bg-img {
@@ -187,6 +181,12 @@ footer {
   width: 100%;
   border-radius: 10px;
   max-width: 200px;
+}
+
+/* footer */
+footer {
+  height: 60px;
+  background-color: white;
 }
 
 @media screen and (min-width: 768px) {
