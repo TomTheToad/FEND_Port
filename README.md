@@ -4,7 +4,7 @@ Udacity FEND Portfolio Project
 <h3>Udacity Front End Developer Nanodegree</h3>
 <h2>Project 1: Portfolio</h2>
 
-<h2>Requirements<</h2>
+<h2>Requirements</h2>
 <p>Modern day browser capable of rendering a grid display.</p>
 
 <h2>Why?</h2>
