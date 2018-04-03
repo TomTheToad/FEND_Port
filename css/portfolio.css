@@ -48,11 +48,8 @@ header {
 }
 
 header img {
-  /* position: absolute; */
-  float: left;
   width: 100px;
   height: 100px;
-  background-color: lightgray;
   margin-top: 2em;
 }
 
@@ -95,7 +92,6 @@ caption {
 }
 
 #photo-credit {
-  float:right;
   margin-right: 2em;
   text-align: right;
   font-style: italic;
